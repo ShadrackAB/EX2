@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
+  <title>Document</title>
+</head>
+ <body class="bg-light">
+  <nav>
+    <h4>Dashbaord Application</h4>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
+    </ul>
+  </nav>
+
+    <div class="container">
+    <div class="card card-register mx-auto mt-5">
+      <div class="card-header">Register an Account</div>
+      <div class="card-body">
+        <form action="/auth/register" method="POST">
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="fname"> First Name</label>
+                <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter First Name">
+              </div>
+              <div class="col-md-6">
+                <label for="lname">Last name</label>
+                <input class="form-control" id="lname" name="lname" placeholder="Enter Last Name">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="username">Username</label>
+              <input type="username" class="form-control" id="username" name="username" placeholder="Enter Username">
+          </div>
+          <div class="form-group">
+            <label for="mobile">Mobile Number</label>
+              <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="Enter Mobile Number">
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email">
+          </div>
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
+              </div>
+              <div class="col-md-6">
+                <label for="passwordConfirm">Confirm Password</label>
+                <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" placeholder="Comfirm Password">
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Register User</button>
+        </form>
+          {{#if message }}
+                <h6 class="alert alert-danger mt-1">{{message}}</h6>
+          {{/if}}
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+</body>
+</html>
